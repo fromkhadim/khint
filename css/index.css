@@ -1,0 +1,169 @@
+/*============================================================================================================================================*/
+                                                                  /* BARRE DE NAVIGATION */
+/*============================================================================================================================================*/
+
+/* Styles pour la barre de navigation */
+header {
+    position: fixed; /* Position fixe pour que la barre reste en haut de la page */
+    top: 0; /* Aligne la barre en haut de la page */
+    background-color: transparent; /* Couleur de fond de la barre de navigation */
+    width: 100%; /* Largeur de la barre sur toute la largeur de la page */
+    z-index: 999; /* Assure que la barre de navigation est au-dessus de tout le reste */
+}
+
+/* Styles pour le menu de la barre de navigation */
+.head {
+    display: flex; /* Utilise Flexbox pour organiser les boutons */
+    justify-content: center; /* Centre les boutons horizontalement */
+}
+
+/* Styles pour tous les boutons de la barre de navigation */
+.header__button {
+    margin: 20px 5px; /* Ajoute une marge autour de chaque bouton */
+}
+
+/* Styles spécifiques pour les boutons "Sign Up" et "Sign In" */
+.header__buttonUp,
+.header__buttonIn {
+    background-color: white; /* Couleur de fond violet pour ces boutons */
+    color: #FBF9F5; /* Couleur de texte blanche */
+    margin: 0 10px; /* Ajoute une marge autour de chaque bouton */
+    margin-right: auto !important; /* Déplace les boutons vers la droite */
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+}
+.header__buttonIn {
+    margin-left: 1200px;
+    margin-top: -60px;
+ }
+ .header__buttonUp {
+    margin-left: 1070px;
+    margin-top: -60px;
+ }
+ .header__buttonIn:hover {
+    background-color: green; /* Couleur de fond vert au survol */
+    color: #fff !important;
+}
+.header__buttonUp:hover {
+    background-color:blue; /* Couleur de fond bleue au survol */
+    color: #fff !important;
+}
+
+/* Styles spécifiques pour les boutons du menu */
+.header__button:nth-child(1), /* ACCUEIL */
+.header__button:nth-child(2), /* FORUM */
+.header__button:nth-child(3), /* FAQ */
+.header__button:nth-child(4), /* CONTACT */
+.header__button:nth-child(5), /* A PROPOS */
+.header__button:nth-child(6) { /* REGLES DU FORUM */
+    color: white;
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(255, 0, 255);
+}
+
+/*============================================================================================================================================*/
+/*============================================================================================================================================*/
+                                                        /* CORPS OU BODY */
+/*============================================================================================================================================*/
+
+/* Ajouter un fond d'écran à l'ensemble de la page */
+body {
+    background-image: url("./images_khint/imgaccueil.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Fixe l'image de fond par rapport à la fenêtre */
+    margin: 0;
+}
+
+/* Styles pour le contenu au milieu de la page */
+.hero-overview {
+    text-align: center; /* Centre le contenu */
+    position: relative; /* Permet de positionner les éléments enfants par rapport à celui-ci */
+    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+    overflow: hidden; /* Cache tout contenu dépassant de la zone définie */
+}
+
+/* Styles pour le logo */
+.logo__esp {
+    position: absolute; /* Position absolue pour pouvoir contrôler son placement */
+    top: 0px; /* Modifier la valeur en fonction de l'emplacement souhaité */
+    left: 0px; /* Modifier la valeur en fonction de l'emplacement souhaité */
+    z-index: 2;
+}
+
+/* Styles pour le titre */
+.hero-overview h4 {
+    color: white; /* Couleur du texte */
+    font-size: 24px; /* Taille de police */
+    font-family: bold;
+    position: absolute; /* Position absolue par rapport au parent */
+    top: 50%; /* Déplace le haut du titre à 50% de la hauteur du parent */
+    left: 50%; /* Déplace le côté gauche du titre à 50% de la largeur du parent */
+    transform: translate(-50%, -50%); /* Translate le titre de moitié de sa propre taille dans les deux directions, le centrant ainsi */
+    z-index: 1; /* Assure que le titre est au-dessus de l'image */
+}
+
+/* Styles pour l'image */
+.hero-overview img {
+    max-width: 150%; /* Limite la largeur de l'image à 80% de la largeur du conteneur */
+    max-height: 100%; /* Limite la hauteur de l'image à 80% de la hauteur du conteneur */
+    position: absolute; /* Position absolue pour que l'image soit au-dessous de la barre de navigation */
+    top: 0; /* Aligne le haut de l'image avec le haut de son conteneur */
+    left: 40%; /* Décale l'image de moitié vers la droite pour la centrer horizontalement */
+    margin-right: -5px;
+    transform: translateX(-40%); /* Déplace l'image de moitié vers la gauche pour la centrer horizontalement */
+}
+
+/* Styles pour le bouton "Get Started" */
+.Get__started {
+    color: white; /* Couleur du texte */
+    font-size: 20px; /* Taille de police */
+    position: absolute; /* Position absolue par rapport au parent */
+    top: 90%; /* Déplace le haut du bouton à 10% de la hauteur du parent */
+    left: 25%; /* Déplace le côté gauche du bouton à 50% de la largeur du parent */
+    transform: translate(-50%, -50%); /* Translate le bouton de moitié de sa propre taille dans les deux directions, le centrant ainsi */
+    z-index: 1; /* Assure que le bouton est au-dessus de l'image */
+    padding: 10px 20px; /* Ajoute du rembourrage autour du texte */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Ajoute un rayon de bordure */
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+/* Styles pour les boutons "Get Doc" et "Go On" */
+.get__doc {
+    color:whitesmoke !important; 
+    background-color:rgb(255, 0, 255);   
+    margin: 0 50px; /* Ajoute une marge de 20px autour de chaque bouton */
+    padding: 10px 20px; /* Ajoute du rembourrage autour du texte */
+    border-radius: 5px; /* Ajoute un rayon de bordure */
+    border: none;
+    cursor: pointer; /* Change le curseur au survol */
+    text-decoration: none; /* Supprime la décoration du lien */
+    display: inline-block; /* Permet aux boutons d'être alignés côte à côte */
+}
+.go__on {
+    color: whitesmoke !important;/* Couleur du texte blanche */
+    background-color: black;
+    margin: 0 50px; /* Ajoute une marge de 20px autour de chaque bouton */
+    padding: 10px 20px; /* Ajoute du rembourrage autour du texte */
+    border: 2px solid rgb(255, 0, 255); /* Définit une bordure solide de 2 pixels de largeur et de couleur rgb */
+    border-radius: 5px; /* Ajoute un rayon de bordure */
+    cursor: pointer; /* Change le curseur au survol */
+    text-decoration: none; /* Supprime la décoration du lien */
+    display: inline-block; /* Permet aux boutons d'être alignés côte à côte */
+}
+/* Effet au survol des boutons "Get Doc" et "Go On" */
+.get__doc:hover, .go__on:hover {
+    background-color: wheat; /* Couleur de fond bleue plus foncée au survol */
+    color: #fff !important;
+}
+
+/* Styles pour la section "dd" */
+.dd { 
+    align-items: center;
+    text-align: justify;
+    margin-left: -150px;
+}
